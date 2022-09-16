@@ -1,0 +1,27 @@
+
+
+
+.main{
+  position: absolute;
+  left: 25.5%;
+  top: 12%;
+  width: 49%;
+  height: 73%;
+  overflow: hidden;
+  padding: 1rem;
+  background-color: red;
+}
+.iphone{
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  background-image: url("/iphone.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+  transition: all 2s ease;
+  transition-delay: 1s;
+  transform: scale(1.5);
+}
