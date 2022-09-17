@@ -1,27 +1,70 @@
 
-
-
 .main{
-  position: absolute;
-  left: 25.5%;
-  top: 12%;
-  width: 49%;
-  height: 73%;
-  overflow: hidden;
-  padding: 1rem;
-  background-color: red;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin-inline: auto;
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scale: 0.5;
 }
-.iphone{
-  overflow: hidden;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  height: 400px;
-  background-image: url("/iphone.svg");
+.content{
+  width: 50%;
+  height: 80%;
+  margin-inline: auto;
+  padding: 1rem;
+  overflow-y: hidden;
+  animation: contentAnimation 6s ease-in infinite;
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/phone.svg");
   background-repeat: no-repeat;
-  background-size: 100% 100%; 
-  transition: all 2s ease;
-  transition-delay: 1s;
-  transform: scale(1.5);
+  background-size:100% 100%;
+  pointer-events:none;
+  animation: phoneAnimation 6s ease-in infinite;
+}
+
+@keyframes phoneAnimation {
+  from{
+    background-image: url("/phone.svg");
+  }
+  33%{
+    background-image: url("/tablet.svg");
+    scale: 1.5;
+  }
+  66%{
+    background-image: url("/monitor.svg");
+    scale: 2;
+  }
+  to{
+    background-image: url("/phone.svg");
+  }
+}
+@keyframes contentAnimation{
+  from{
+    width: 50%;
+    height: 80%;
+  }
+  33%{
+    width: 80%;
+    height: 50%;
+    scale: 1.5;
+  }
+  66%{
+    width: 80%;
+    height: 50%;
+    margin-bottom: 10rem;
+    scale: 2;
+  }
+  to{
+    width: 50%;
+    height: 80%;
+  }
 }
