@@ -1,74 +1,134 @@
 
 .main{
-  position: relative;
-  width: 500px;
-  height: 500px;
-  margin-inline: auto;
-  margin-top: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scale: 0.5;
-  @media screen and (max-width:500px) {
-    width: 70%;
-    height: 250px;
-  }
-}
-.content{
-  width: 50%;
-  height: 80%;
-  margin-inline: auto;
+  max-width: 1440px;
   padding: 1rem;
-  overflow-y: hidden;
-  animation: contentAnimation 6s ease-in infinite;
+  margin-inline: auto;
+  
 }
-.overlay{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("/phone.svg");
-  background-repeat: no-repeat;
-  background-size:100% 100%;
-  pointer-events:none;
-  animation: phoneAnimation 6s ease-in infinite;
+.overlay_text{
+  opacity: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  font-size: 5rem;
+  font-weight: 600;
+  color: gray;
+  font-size: 50px;
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (min-width:768px) {
+  .main{
+    animation: mainAnimation 3s cubic-bezier(0.5, 0, 0.75, 0);
+  }
+  .content{
+    animation: contentAnimation 3s cubic-bezier(0.5, 0, 0.75, 0);
+  }
+  .overlay{
+    animation: phoneAnimation 3s cubic-bezier(0.5, 0, 0.75, 0);
+  }
+  .overlay_text{
+    animation: overlayText 3s cubic-bezier(0.5, 0, 0.75, 0) forwards;
+  }
 }
 
-@keyframes phoneAnimation {
+
+@keyframes mainAnimation {
   from{
-    background-image: url("/phone.svg");
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 500px;
+    height: 500px;
   }
-  33%{
-    background-image: url("/tablet.svg");
-    scale: 1.5;
-  }
-  66%{
-    background-image: url("/monitor.svg");
-    scale: 2;
+  50%{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 1000px;
+    height: 1000px;
   }
   to{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes phoneAnimation {
+  from{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url("/phone.svg");
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+  }
+  50%{ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/tablet.svg");
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+  }
+  to{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/monitor.svg");
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    opacity: 0;
+    scale: 2;
   }
 }
 @keyframes contentAnimation{
   from{
     width: 50%;
-    height: 80%;
+    height: 100%;
+    margin-inline: auto;
+    padding: 1rem;
+    padding-top: 5rem;
+    overflow-y: hidden;
   }
-  33%{
+  50%{
     width: 80%;
     height: 50%;
-    scale: 1.5;
-  }
-  66%{
-    width: 80%;
-    height: 50%;
-    margin-bottom: 10rem;
-    scale: 2;
+    margin-inline: auto;
+    padding: 1rem;
+    padding-top: 5rem;
+    overflow-y: hidden;
+    translate: 0 50%;
+    padding-top: 0;
   }
   to{
-    width: 50%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
+    margin-inline: auto;
+    padding: 1rem;
+    padding-top: 0;
+    overflow-y: hidden;
+  }
+}
+@keyframes overlayText{
+  from{
+    opacity: 0.8;
+  }
+  to{
+    opacity: 0;
   }
 }
