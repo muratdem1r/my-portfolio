@@ -9,6 +9,10 @@
   align-items: center;
   justify-content: center;
   scale: 0.5;
+  @media screen and (max-width:500px) {
+    width: 70%;
+    height: 250px;
+  }
 }
 .content{
   width: 50%;
