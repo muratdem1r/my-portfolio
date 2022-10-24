@@ -27,8 +27,8 @@ body{
   background-image: url("/background.jpg"); // Fallback
   background-image: url("/background.jpg"), linear-gradient(to left, #3a3838, #000000);
   background-blend-mode:multiply;
-  margin-top: 5rem;
 }
+
 a {
   color: inherit;
   text-decoration: none;

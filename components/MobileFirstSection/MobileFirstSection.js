@@ -5,7 +5,7 @@ import { TbCertificate } from "react-icons/tb";
 
 function MobileFirstSection() {
   return (
-    <div>
+    <div className="relative">
       <div className={styles.overlay_text}>MOBILE FIRST</div>
       <div className={styles.main}>
         <div className={styles.overlay}></div>

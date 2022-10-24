@@ -15,8 +15,8 @@ function Me() {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 text-white md:w-3/4 md:mx-auto">
-      <div className="grid content-center">
+    <div className="grid grid-cols-1 md:grid-cols-2 text-white dark:text-black md:w-3/4 md:mx-auto">
+      <div className="grid content-center mt-20">
         <h1 className="text-center font-[James-Stroker] text-7xl m-5 mb-0">
           Murat Demir
         </h1>

@@ -7,6 +7,5 @@ module.exports = {
   theme: {
     extend: {},
   },
-  darkMode: ["class", '[data-mode="white"]'],
   plugins: [],
 };
