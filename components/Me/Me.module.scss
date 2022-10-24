@@ -1,0 +1,209 @@
+                                 
+.me_photo{
+    background-image: url("/me/1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    @apply
+    md:h-[600px]
+    ;
+    margin-inline: auto;
+    &.take_off{
+      animation: takeOff 1s linear forwards;
+    }
+    &.take_on{
+      animation: takeOn 1s linear forwards;
+    }
+}
+.front_end{
+    position: relative;
+    margin-inline: auto;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    h2:nth-child(1){
+      padding: 0.5rem;
+    }
+    h2:nth-child(2){
+      padding: 0.5rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: white;
+      color: black;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+    }
+}
+
+@keyframes takeOff {
+  from{
+    background-image: url("/me/1.png");
+  }
+  4%{
+    background-image: url("/me/2.png");
+  }
+  8%{
+    background-image: url("/me/3.png");
+  }
+  12%{
+    background-image: url("/me/4.png");
+  }
+  16%{
+    background-image: url("/me/5.png");
+  }
+  20%{
+    background-image: url("/me/6.png");
+  }
+  24%{
+    background-image: url("/me/7.png");
+  }
+  28%{
+    background-image: url("/me/8.png");
+  }
+  32%{
+    background-image: url("/me/9.png");
+  }
+  36%{
+    background-image: url("/me/10.png");
+  }
+  40%{
+    background-image: url("/me/11.png");
+  }
+  44%{
+    background-image: url("/me/12.png");
+  }
+  48%{
+    background-image: url("/me/13.png");
+  }
+  52%{
+    background-image: url("/me/14.png");
+  }
+  56%{
+    background-image: url("/me/15.png");
+  }
+  60%{
+    background-image: url("/me/16.png");
+  }
+  64%{
+    background-image: url("/me/17.png");
+  }
+  68%{
+    background-image: url("/me/18.png");
+  }
+  72%{
+    background-image: url("/me/19.png");
+  }
+  76%{
+    background-image: url("/me/20.png");
+  }
+  80%{
+    background-image: url("/me/21.png");
+  }
+  84%{
+    background-image: url("/me/22.png");
+  }
+  88%{
+    background-image: url("/me/23.png");
+  }
+  92%{
+    background-image: url("/me/24.png");
+  }
+  96%{
+    background-image: url("/me/25.png");
+  }
+  97%{
+    background-image: url("/me/26.png");
+  }
+  100%{
+    background-image: url("/me/27.png");
+  }
+}
+
+@keyframes takeOn {
+  from{
+    background-image: url("/me/27.png");
+  }
+  3%{
+    background-image: url("/me/26.png");
+  }
+  6%{
+    background-image: url("/me/25.png");
+  }
+  9%{
+    background-image: url("/me/24.png");
+  }
+  12%{
+    background-image: url("/me/23.png");
+  }
+  15%{
+    background-image: url("/me/22.png");
+  }
+  18%{
+    background-image: url("/me/21.png");
+  }
+  21%{
+    background-image: url("/me/20.png");
+  }
+  24%{
+    background-image: url("/me/19.png");
+  }
+  27%{
+    background-image: url("/me/18.png");
+  }
+  30%{
+    background-image: url("/me/17.png");
+  }
+  33%{
+    background-image: url("/me/16.png");
+  }
+  36%{
+    background-image: url("/me/15.png");
+  }
+  39%{
+    background-image: url("/me/14.png");
+  }
+  42%{
+    background-image: url("/me/13.png");
+  }
+  45%{
+    background-image: url("/me/12.png");
+  }
+  48%{
+    background-image: url("/me/11.png");
+  }
+  51%{
+    background-image: url("/me/10.png");
+  }
+  54%{
+    background-image: url("/me/9.png");
+  }
+  57%{
+    background-image: url("/me/8.png");
+  }
+  60%{
+    background-image: url("/me/7.png");
+  }
+  63%{
+    background-image: url("/me/6.png");
+  }
+  66%{
+    background-image: url("/me/5.png");
+  }
+  69%{
+    background-image: url("/me/4.png");
+  }
+  72%{
+    background-image: url("/me/3.png");
+  }
+  75%{
+    background-image: url("/me/2.png");
+  }
+  78%{
+    background-image: url("/me/1.png");
+  }
+  100%{
+    background-image: url("/me/1.png");
+  }
+}

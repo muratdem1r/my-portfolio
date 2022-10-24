@@ -1,0 +1,134 @@
+
+.main{
+  max-width: 1440px;
+  padding: 1rem;
+  margin-inline: auto;
+  
+}
+.overlay_text{
+  opacity: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  font-size: 5rem;
+  font-weight: 600;
+  color: gray;
+  font-size: 50px;
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (min-width:768px) {
+  .main{
+    animation: mainAnimation 3s cubic-bezier(0.5, 0, 0.75, 0);
+  }
+  .content{
+    animation: contentAnimation 3s cubic-bezier(0.5, 0, 0.75, 0);
+  }
+  .overlay{
+    animation: phoneAnimation 3s cubic-bezier(0.5, 0, 0.75, 0);
+  }
+  .overlay_text{
+    animation: overlayText 3s cubic-bezier(0.5, 0, 0.75, 0) forwards;
+  }
+}
+
+
+@keyframes mainAnimation {
+  from{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 500px;
+    height: 500px;
+  }
+  50%{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 1000px;
+    height: 1000px;
+  }
+  to{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes phoneAnimation {
+  from{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/phone.svg");
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+  }
+  50%{ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/tablet.svg");
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+  }
+  to{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/monitor.svg");
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    opacity: 0;
+    scale: 2;
+  }
+}
+@keyframes contentAnimation{
+  from{
+    width: 50%;
+    height: 100%;
+    margin-inline: auto;
+    padding: 1rem;
+    padding-top: 5rem;
+    overflow-y: hidden;
+  }
+  50%{
+    width: 80%;
+    height: 50%;
+    margin-inline: auto;
+    padding: 1rem;
+    padding-top: 5rem;
+    overflow-y: hidden;
+    translate: 0 50%;
+    padding-top: 0;
+  }
+  to{
+    width: 100%;
+    height: 100%;
+    margin-inline: auto;
+    padding: 1rem;
+    padding-top: 0;
+    overflow-y: hidden;
+  }
+}
+@keyframes overlayText{
+  from{
+    opacity: 0.8;
+  }
+  to{
+    opacity: 0;
+  }
+}
