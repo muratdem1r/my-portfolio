@@ -1,4 +1,31 @@
-                                 
+.loadImages{
+  background-image: url("/me/2.png"), 
+  url("/me/3.png"),
+  url("/me/4.png"),
+  url("/me/5.png"),
+  url("/me/6.png"),
+  url("/me/7.png"),
+  url("/me/8.png"),
+  url("/me/9.png"),
+  url("/me/10.png"),
+  url("/me/11.png"),
+  url("/me/12.png"),
+  url("/me/13.png"),
+  url("/me/14.png"),
+  url("/me/15.png"),
+  url("/me/16.png"),
+  url("/me/17.png"),
+  url("/me/18.png"),
+  url("/me/19.png"),
+  url("/me/20.png"),
+  url("/me/21.png"),
+  url("/me/22.png"),
+  url("/me/23.png"),
+  url("/me/24.png"),
+  url("/me/25.png"),
+  url("/me/26.png"),
+  url("/me/27.png");
+}                                 
 .me_photo{
     background-image: url("/me/1.png");
     background-repeat: no-repeat;
@@ -19,6 +46,7 @@
       animation: takeOn 750ms linear;
     }
 }
+
 .front_end{
     position: relative;
     margin-inline: auto;
